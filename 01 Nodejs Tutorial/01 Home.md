@@ -46,4 +46,4 @@ The result is displayed in the Command Line Interface
 <br/>
 <br/>
 
-[02 Intro](./02%20Intro.md)
+:arrow_forward:[02 Intro](./02%20Intro.md) :arrow_forward:
