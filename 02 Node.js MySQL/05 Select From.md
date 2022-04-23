@@ -4,8 +4,6 @@
 
 MySQL의 테이블에서 데이터를 선택하려면 `SELECT` 문을 사용합니다.
 
-- demo_db_select.js
-
 ```javascript
 var mysql = require("mysql");
 
@@ -25,18 +23,12 @@ con.connect(function (err) {
 });
 ```
 
-```
-$ node demo_db_select.js
-```
-
 <br />
 <br />
 
 ## 2. Selecting Columns
 
 테이블의 일부 열만 선택하려면 `SELECT` 문 다음에 열 이름을 사용합니다.
-
-- demo_db_select2.js
 
 ```javascript
 var mysql = require("mysql");
@@ -60,10 +52,6 @@ con.connect(function (err) {
 });
 ```
 
-```
-$ node demo_db_select2.js
-```
-
 <br />
 <br />
 
@@ -78,8 +66,6 @@ result 객체는 각 행을 객체로 포함하는 배열입니다.
 ## 4. The Fields Object
 
 콜백 함수의 세번째 매개변수 fields 는 각 필드에 대한 정보를 포함하는 배열입니다.
-
-- demo_db_select_fields.js
 
 ```javascript
 var mysql = require("mysql");
@@ -102,10 +88,6 @@ con.connect(function (err) {
     }
   );
 });
-```
-
-```
-$ node demo_db_select_fields.js
 ```
 
 <br />

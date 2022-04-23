@@ -4,8 +4,6 @@
 
 테이블에서 레코드를 선택할 때 `WHERE` 문을 사용하여 선택을 필터링 할 수 있습다.
 
-- demo_db_where.js
-
 ```javascript
 var mysql = require("mysql");
 
@@ -28,10 +26,6 @@ con.connect(function (err) {
 });
 ```
 
-```
-$ node demo_db_where.js
-```
-
 <br />
 <br />
 
@@ -39,8 +33,6 @@ $ node demo_db_where.js
 
 주어진 문자나 구로 시작하거나 포함하거나 끝나는 레코드를 선택할 수도 있습니다.
 `%` 를 사용하여 0개, 1개 또는 여러 문자를 나타냅니다.
-
-- demo_db_where_s.js
 
 ```javascript
 var mysql = require("mysql");
@@ -62,10 +54,6 @@ con.connect(function (err) {
     }
   );
 });
-```
-
-```
-$ node demo_db_where_s.js
 ```
 
 <br />

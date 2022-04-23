@@ -1,10 +1,6 @@
 # 02 Create Database
 
-## 1. Creating a Database
-
 MySQL 에서 데이터베이스를 생성하려면 `CREATE DATABASE` 문을 사용합니다.
-
-- demo_create_db.js
 
 ```javascript
 var mysql = require("mysql");
@@ -17,16 +13,14 @@ var con = mysql.createConnection({
 
 con.connect(function (err) {
   if (err) throw err;
+
   console.log("Connected!");
   con.query("CREATE DATABASE mydb", function (err, result) {
     if (err) throw err;
+
     console.log("Database created");
   });
 });
-```
-
-```
-$ node demo_create_db.js
 ```
 
 <br />

@@ -2,7 +2,7 @@
 
 ## 1. MySQL Database
 
-[MySQL 공식 홈페이지](https://www.mysql.com/downloads/)에서 MySQL 데이터베이스를 다운로드 합니다.
+[MySQL 공식 홈페이지](https://www.mysql.com/downloads/) 에서 MySQL 데이터베이스를 다운로드 합니다.
 
 <br />
 <br />
@@ -28,25 +28,20 @@ var mysql = require("mysql");
 데이터베이스에 대한 연결을 생성하여 시작합니다.  
 MySQL 데이터베이스의 사용자 이름과 비밀번호를 사용합니다.
 
-- demo_db_connection.js
+```javascript
+var mysql = require("mysql");
 
-  ```javascript
-  var mysql = require("mysql");
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourname",
+  password: "yourpassword",
+});
 
-  var con = mysql.createConnection({
-    host: "localhost",
-    user: "yourname",
-    password: "yourpassword",
-  });
+con.connect(function (err) {
+  if (err) throw err;
 
-  con.connect(function (err) {
-    if (err) throw err;
-    console.log("Connected!");
-  });
-  ```
-
-```
-$ node demo_db_connection.js
+  console.log("Connected!");
+});
 ```
 
 <br />
@@ -60,6 +55,7 @@ SQL 문을 사용하여 MySQL 데이터베이스에서 읽거나 씁니다.(쿼�
 ```javascript
 con.connect(function(err) {
     if(err) throe err;
+
     console.log("Connected!");
     con.query(/* sql */, function(err, result) {
         if(err) throw err;
