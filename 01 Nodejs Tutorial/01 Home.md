@@ -1,7 +1,7 @@
 # 01 Home
 
-Nodejs는 오픈 소스 서버 환경입니다.  
-Nodejs를 사용하면 서버에서 JavaScript를 실행할 수 있습니다.
+Nodejs 는 오픈 소스 서버 환경입니다.  
+Nodejs 를 사용하면 서버에서 JavaScript를 실행할 수 있습니다.
 
 <br/>
 
@@ -23,18 +23,18 @@ http
 
 ## 2. Examples Running in the Command Line Interface
 
-```
-$ node demo_intro_cmd.js
-This example is different!
-The result is displayed in the Command Line Interface
-```
-
 - demo_intro_cmd.js
 
   ```javascript
   console.log("This example is different!");
   console.log("The result is displayed in the Command Line Interface");
   ```
+
+```
+$ node demo_intro_cmd.js
+This example is different!
+The result is displayed in the Command Line Interface
+```
 
 <br/>
 <br/>

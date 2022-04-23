@@ -2,7 +2,7 @@
 
 ## 1. Download Node.js
 
-[Node.js 공식 웹사이트](https://nodejs.org/en/)에서 다운로드 합니다.
+[Node.js 공식 웹사이트](https://nodejs.org/en/) 에서 다운로드 합니다.
 
 <br/>
 <br/>

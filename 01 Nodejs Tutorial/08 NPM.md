@@ -26,22 +26,17 @@ npm install upper-case  // uppser-case 패키지 다운로드
 
 ## 4. Using a Package
 
-- demo_uppercase.js
+```javascript
+var http = require("http");
+var uc = require("upper-case");
 
-  ```javascript
-  var http = require("http");
-  var uc = require("upper-case");
-  http
-    .createServer(function (req, res) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(uc.upperCase("Hello World!"));
-      res.end();
-    })
-    .listen(8080);
-  ```
-
-```
-node demo_uppercase.js
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(uc.upperCase("Hello World!"));
+    res.end();
+  })
+  .listen(8080);
 ```
 
 <br />

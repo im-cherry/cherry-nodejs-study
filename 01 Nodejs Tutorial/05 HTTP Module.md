@@ -16,21 +16,15 @@ var http = require("http");
 HTTP 모듈은 서버 포트를 수신 대기하고 클라이언트에 응답을 제공하는 HTTP 서버를 생성할 수 있습니다.  
 `createServer` 메서드를 사용하여 HTTP 서버를 만듭니다.
 
-- demo_http.js
+```javascript
+var http = require("http");
 
-  ```javascript
-  var http = require("http");
-
-  http
-    .createServer(function (req, res) {
-      res.write("Hello World!"); // 클라이언트에 응답 write
-      res.end(); // 응답 종료
-    })
-    .listen(8080); // 누군가 포트 8080에 액세스하려고 할 때 실행됩니다.
-  ```
-
-```
-$ node demo_http.js
+http
+  .createServer(function (req, res) {
+    res.write("Hello World!"); // 클라이언트에 응답 write
+    res.end(); // 응답 종료
+  })
+  .listen(8080); // 누군가 포트 8080에 액세스하려고 할 때 실행됩니다.
 ```
 
 <br/>
@@ -46,7 +40,7 @@ HTTP 서버의 응답이 HTML로 표시되어야 하는 경우 올바른 컨텐�
 var http = require("http");
 http
   .createServer(function (req, res) {
-    res.writeHead(200, { "Content-Type": "text/html" }); // 200: 정상
+    res.writeHead(200, { "Content-Type": "text/html" });
     res.write("Hello World!");
     res.end();
   })
@@ -60,22 +54,16 @@ http
 
 `createServer(res, req)` 함수에서 `req` 객체는 도메인 이름 뒤에 오는 URL 부분을 포함하는 `url` 이라는 속성이 있습니다.
 
-- demo_http_url.js
-
-  ```javascript
-  var http = require("http");
-
-  http
-    .createServer(function (req, res) {
-      res.writeHead(200, { "Content-Type": "text/html" });
-      rew.write(req.url);
-      res.end();
-    })
-    .listen(8080);
-  ```
-
 ```javascript
-$ node demo_http_url.js
+var http = require("http");
+
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    rew.write(req.url);
+    res.end();
+  })
+  .listen(8080);
 ```
 
 `https://localhost:8080/summer` 으로 접속한 경우 `/summer` 가 화면에 표시됩니다.
@@ -85,9 +73,7 @@ $ node demo_http_url.js
 
 ## 5. Split the Query String
 
-쿼리 문자열을 URL 모듈과 같이 읽을 수 있는 부분으로 쉽게 분할할 수 있는 내장 모듈(url)이 있습니다.
-
-- demo_querystring.js
+쿼리 문자열을 URL 모듈과 같이 읽을 수 있는 부분으로 쉽게 분할할 수 있는 내장 모듈 `url`이 있습니다.
 
 ```javascript
 var http = require("http");
@@ -101,10 +87,6 @@ http
     res.end(txt);
   })
   .listen(8080);
-```
-
-```
-$ node demo_querystring.js
 ```
 
 `https://localhost:8080/year=2017&month=July` 으로 접속한 경우 `2017 July` 가 화면에 표시됩니다.

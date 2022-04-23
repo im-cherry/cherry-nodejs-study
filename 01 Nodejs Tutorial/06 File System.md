@@ -2,19 +2,18 @@
 
 ## 1. Node.js as a File Server
 
-Node.js 파일 시스템 모듈을 사용하면 컴퓨터의 파일 시스템으로 작업할 수 있습니다.
+- Node.js 파일 시스템 모듈을 사용하면 컴퓨터의 파일 시스템으로 작업할 수 있습니다.
 
-```javascript
-var fs = require("fs");
-```
+  ```javascript
+  var fs = require("fs");
+  ```
 
-파일 시스템 모듈의 일반적인 용도
-
-- 파일 read
-- 파일 crete
-- 파일 update
-- 파일 delete
-- 파일 이름 rename
+- 파일 시스템 모듈의 일반적인 용도
+  - 파일 read
+  - 파일 crete
+  - 파일 update
+  - 파일 delete
+  - 파일 이름 rename
 
 <br/>
 <br/>
@@ -23,35 +22,27 @@ var fs = require("fs");
 
 `fs.readFile()` 은 컴퓨터에서 파일을 읽는 데 사용됩니다.
 
-- demofile1.html
-
-  ```html
-  <html>
-    <body>
-      <h1>My Header</h1>
-      <p>My paragraph.</p>
-    </body>
-  </html>
-  ```
-
-- demo_readfile.js
-
-  ```javascript
-  var http = require("http");
-  var fs = require("fs");
-  http
-    .createServer(function (req, res) {
-      fs.readFile("demofile1.html", function (err, data) {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.write(data);
-        return res.end();
-      });
-    })
-    .listen(8080);
-  ```
-
+```html
+<html>
+  <body>
+    <h1>My Header</h1>
+    <p>My paragraph.</p>
+  </body>
+</html>
 ```
-$ node demo_readfile.js
+
+```javascript
+var http = require("http");
+var fs = require("fs");
+http
+  .createServer(function (req, res) {
+    fs.readFile("index.html", function (err, data) {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      return res.end();
+    });
+  })
+  .listen(8080);
 ```
 
 <br/>
@@ -103,14 +94,14 @@ $ node demo_readfile.js
 
 - fs.appendFile() : 파일의 끝에 내용을 추가
 
-```javascript
-var fs = require("fs");
+  ```javascript
+  var fs = require("fs");
 
-fs.appendFile("myfile1.txt", "This is my text", function (err) {
-  if (err) throw err;
-  console.log("Updated!");
-});
-```
+  fs.appendFile("myfile1.txt", "This is my text", function (err) {
+    if (err) throw err;
+    console.log("Updated!");
+  });
+  ```
 
 - fs.writeFile() : 파일 내용 변경
 

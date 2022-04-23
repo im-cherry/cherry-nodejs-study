@@ -2,26 +2,26 @@
 
 ## 1. The Built-in URL Module
 
-URL 모듈은 웹 주소를 읽을 수 있는 부분으로 분할합니다.
+- URL 모듈은 웹 주소를 읽을 수 있는 부분으로 분할합니다.
 
-```javascript
-var url = require("url");
-```
+  ```javascript
+  var url = require("url");
+  ```
 
-`url.parse()` 메서드는 주소를 구분 분석하여 속성으로 포함된 URL 개체가 반환됩니다.
+- `url.parse()` 메서드는 주소를 구분 분석하여 속성으로 포함된 URL 개체가 반환됩니다.
 
-```javascript
-var url = require("url");
-var adr = "http://localhost:8080/default.htm?year=2017&month=february";
-var q = url.parse(adr, true);
+  ```javascript
+  var url = require("url");
+  var adr = "http://localhost:8080/default.htm?year=2017&month=february";
+  var q = url.parse(adr, true);
 
-console.log(q.host); // localhost:8080
-console.log(q.pathname); // default.htm
-console.log(q.search); // ?year=2017&month=february
+  console.log(q.host); // localhost:8080
+  console.log(q.pathname); // default.htm
+  console.log(q.search); // ?year=2017&month=february
 
-var qdata = q.query;
-console.log(qdata.month); // february
-```
+  var qdata = q.query;
+  console.log(qdata.month); // february
+  ```
 
 <br/>
 <br/>
@@ -54,8 +54,6 @@ console.log(qdata.month); // february
   </html>
   ```
 
-- demo_fileserver.js
-
 ```javascript
 var http = require("http");
 var url = require("url");
@@ -76,10 +74,6 @@ http
     });
   })
   .listen(8080);
-```
-
-```
-$ node demo_fileserver.js
 ```
 
 <br/>

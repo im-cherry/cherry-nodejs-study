@@ -23,8 +23,8 @@ Node.js는 대기를 없애고 다음 요청을 계속합니다.
 ## 3. What Can Node.js Do?
 
 - Node.js 는 동적 페이지 콘텐츠를 생성할 수 있습니다.
-- Node.js 는 서버에서 파일을 open, read, write, delete, close 할 수 이씃ㅂ니다.
-- Node.js는 양식 데이터를 수집할 수 있습니다.
+- Node.js 는 서버에서 파일을 open, read, write, delete, close 할 수 있습니다.
+- Node.js 는 양식 데이터를 수집할 수 있습니다.
 - Node.js 는 데이터베이스의 데이터를 add, delete, modify 할 수 있습니다.
 
 <br/>

@@ -17,22 +17,22 @@ Node.js 에는 추가 설치 없이 사용할 수 있는 [내장 모듈들](http
 
 ## 3. Include Modules
 
-모듈을 포함하려면 `require()` 함수를 사용하세요.
+- 모듈을 포함하려면 `require()` 함수를 사용하세요.
 
-```javascript
-var http = require("http");
-```
+  ```javascript
+  var http = require("http");
+  ```
 
-애플리케이션이 HTTP 모듈에 액세스할 수 있으며 서버를 생성할 수 있습니다.
+- 애플리케이션이 HTTP 모듈에 액세스할 수 있으며 서버를 생성할 수 있습니다.
 
-```javascript
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.end("Hello World!");
-  })
-  .listen(8080);
-```
+  ```javascript
+  http
+    .createServer(function (req, res) {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end("Hello World!");
+    })
+    .listen(8080);
+  ```
 
 <br/>
 <br/>
@@ -43,6 +43,7 @@ http
 아래 예시는 날짜 및 시간 개체를 반환하는 모듈을 만듭니다.
 
 - myfirstmodule.js
+
   ```javascript
   exports.myDateTime = function () {
     return Date();
@@ -60,22 +61,18 @@ http
 
 - demo_module.js
 
-```javascript
-var http = require("http");
-var dt = require("./myfirstmodule");
+  ```javascript
+  var http = require("http");
+  var dt = require("./myfirstmodule");
 
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write("The date and time are currently: " + dt.myDateTime());
-    res.end();
-  })
-  .listen(8080);
-```
-
-```
-$ node demo_module.js
-```
+  http
+    .createServer(function (req, res) {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write("The date and time are currently: " + dt.myDateTime());
+      res.end();
+    })
+    .listen(8080);
+  ```
 
 <br/>
 <br/>
